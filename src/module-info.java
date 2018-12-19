@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author alienorfleury
+ *
+ */
+module MUD {
+}
