@@ -1,4 +1,5 @@
 
-public class maelle {
- // COUCOU tout le monde
+public class maelle 
+{
+	int i;
 }
