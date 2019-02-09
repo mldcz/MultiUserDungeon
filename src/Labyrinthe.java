@@ -1,20 +1,21 @@
-
-import java.awt.Point;
-import java.util.Arrays;
-
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Vector;
 public class Labyrinthe {
 	
 	//colonnes et lignes du labyrinthe 
-	public int lignes=5;
-	public int colonnes=5;
+	public int X;
+	public int Y;
 	
 	//tableau des cases du labyrinthe 
 	String tabPiece[][];
-	
-	//position initiale 
-	private Point init = new Point(1,1);
-	
-	
+		
 	
 	//creation des pieces du labyrinthe O,N,E,S représentent les possibilités de déplacement, M indique la présence d'un monstre, T est le trésor
 	public void generationPiece(String tabPiece[][]){
