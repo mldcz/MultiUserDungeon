@@ -1,9 +1,9 @@
 
 public class Combattant {
 	
-	int pointsVie;
-	int position[][];
-	boolean estVictorieux;
+	private int pointsVie;
+	private int position[][];
+	private boolean estVictorieux;
 	
 	
 	public boolean attaquer (String NomJ) {

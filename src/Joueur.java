@@ -9,6 +9,18 @@ public class Joueur extends Combattant {
 		this.pointsVie = 10;
 	}
 	
+	public void setPointsVie(int pointsVie) {
+		super.setPointsVie(pointsVie);
+	}
+
+	public int getPointsVie() {
+		return super.getPointsVie();
+	}
+
+	public void getPosition() {
+		super.getPosition();
+	}
+
 	public void seDeplacer () {
 		
 	}
