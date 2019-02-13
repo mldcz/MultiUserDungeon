@@ -1,6 +1,8 @@
 
 public class Piece {
 	
+	
+	//cette classe ne sert a rien 
 	int NbPortes;
 	int Monstre;
 	

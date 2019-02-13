@@ -46,7 +46,9 @@ public class Labyrinthe {
 		tabPiece[5][4]="O,E,S,M";
 		tabPiece[5][5]="O,S,M";
 
-	
+		
+		    
+		
 	}	
 	
 }

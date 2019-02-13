@@ -10,7 +10,7 @@ import java.util.Vector;
 
 public class ServeurJeu extends UnicastRemoteObject implements JServeurInterface{
 
-	public static ArrayList<String> joueurs = new ArrayList<String>();
+	public static ArrayList<Joueur> joueurs = new ArrayList<Joueur>();
 	
 	
 	public static void main (String args[]) {
@@ -23,7 +23,7 @@ public class ServeurJeu extends UnicastRemoteObject implements JServeurInterface
             //MsgServer MS = new MsgServer(MS);
             reg.rebind("rmi://127.0.0.78:1010/server", JS);       
             System.out.println("Server started ! ");
-            JS.CreationLab();  
+            
 			
 			
 		}catch(Exception e) {
@@ -31,27 +31,19 @@ public class ServeurJeu extends UnicastRemoteObject implements JServeurInterface
 		}
 	}
 	
-	//utile si on a un labyrinthe en dur ? 
-	public void CreationLab() throws RemoteException{
-		
-		
-		
-	}
-	
-	//utile si on a un labyrinthe en dur ? 
-	public int changePiece() throws RemoteException{
-		
-		return 0;
-	}
 	
 	
-	public int isLabFini() throws RemoteException{
+	public boolean isLabFini() throws RemoteException{
 		//position[][] à créer, on teste la position du joueur 
+		
+		//si position change alors : 
+		
 		if(position[][]==[4][4]) {
-			return 1;
+			System.out.println("Bravo, vous avez trouvé le trésor et terminé le labyrinthe !");
+			return true;
 		}
 		else {
-			return 0;
+			return false;
 		}
 	}
 	
@@ -59,15 +51,20 @@ public class ServeurJeu extends UnicastRemoteObject implements JServeurInterface
 	
 	public int exitLab() throws RemoteException{
 	
+		if(isLabFini()==true) {
+			
+			//modifier la position du joueur à position[1][1]
+		}
+		
 		return 0;
 	}
 	
 	
 	public static String getListeJoueurs() throws RemoteException{
 		
-		String getListe = joueurs.get(joueurs.size()); 
+		Joueur getListe = joueurs.get(joueurs.size()); 
 		
-		return getListe;
+		return getListeJoueurs();
 	}
 	
 	
