@@ -2,7 +2,7 @@
 public class Combattant {
 	
 	private int pointsVie;
-	private int position[][];
+	private String position[][];
 	private boolean estVictorieux;
 	
 	
