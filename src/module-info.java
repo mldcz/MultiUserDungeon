@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author alienorfleury
- *
- */
-//module MUD {
-//}
