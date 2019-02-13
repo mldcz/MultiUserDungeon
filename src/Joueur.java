@@ -1,10 +1,10 @@
-package src;
 
 public class Joueur extends Combattant {
 	
 	private String NomJ;
 	
 	public Joueur (String NomJ) {
+		super();
 		this.NomJ = NomJ;
 		this.pointsVie = 10;
 	}
@@ -13,9 +13,6 @@ public class Joueur extends Combattant {
 		
 	}
 	public void prendreLaFuite () {
-		
-	}
-	public void quitterLabyrinthe () {
 		
 	}
 	

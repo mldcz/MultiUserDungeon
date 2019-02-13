@@ -1,9 +1,8 @@
-package src;
 
 public class Combattant {
 	
 	int pointsVie;
-	int position;
+	int position[][];
 	boolean estVictorieux;
 	
 	
