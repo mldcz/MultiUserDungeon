@@ -1,7 +1,6 @@
-
 public class ServeurCombat {
 	
-	public static ArrayList<String, String> listeCombats = new ArrayList<String, String>();
+	public static ArrayList<String> listeCombats = new ArrayList<String>();
 	
 	public void nouveauCombat(Combattant Combattant) {
 		

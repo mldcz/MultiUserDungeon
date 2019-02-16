@@ -1,7 +1,6 @@
-
 public class Combattant {
 	
-	private int pointsVie;
+	protected int pointsVie;
 	private String position[][];
 	private boolean estVictorieux;
 	

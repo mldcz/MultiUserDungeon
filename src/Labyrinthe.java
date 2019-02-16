@@ -17,7 +17,7 @@ public class Labyrinthe {
 	String tabPiece[][];
 		
 	
-	//creation des pieces du labyrinthe O,N,E,S représentent les possibilités de déplacement, M indique la présence d'un monstre, T est le trésor
+	//creation des pieces du labyrinthe O,N,E,S reprï¿½sentent les possibilitï¿½s de dï¿½placement, M indique la prï¿½sence d'un monstre, T est le trï¿½sor
 	public void generationPiece(String tabPiece[][]){
 		
 		tabPiece[1][1]="N,E";

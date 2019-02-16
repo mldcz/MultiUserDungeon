@@ -1,13 +1,12 @@
-
 public class Monstre extends Combattant {
 	
-	private String NomM;
+	private String nomM;
 	
-	public Monstre (String NomM) {
+	public Monstre (String nomM) {
 
 		
 		super();
-		this.NomM = NomM;
+		this.nomM = nomM;
 		this.pointsVie = 5;
 	}
 

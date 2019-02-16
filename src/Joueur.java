@@ -1,11 +1,10 @@
-
 public class Joueur extends Combattant {
 	
-	private String NomJ;
+	private String nomJ;
 	
-	public Joueur (String NomJ) {
+	public Joueur (String nomJ) {
 		super();
-		this.NomJ = NomJ;
+		this.nomJ = nomJ;
 		this.pointsVie = 10;
 	}
 	

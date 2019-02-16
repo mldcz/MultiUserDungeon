@@ -15,7 +15,7 @@ public class ServeurJeu extends UnicastRemoteObject implements JServeurInterface
 	
 	public static void main (String args[]) {
 		
-		//à remplir avec les bonnes infos de connexion 
+		//ï¿½ remplir avec les bonnes infos de connexion 
 		try {
 			Registry reg = LocateRegistry.createRegistry(1010);
             //Naming.rebind("rmi://127.0.0.1:1099/server", reg);
@@ -34,12 +34,12 @@ public class ServeurJeu extends UnicastRemoteObject implements JServeurInterface
 	
 	
 	public boolean isLabFini() throws RemoteException{
-		//position[][] à créer, on teste la position du joueur 
+		//position[][] ï¿½ crï¿½er, on teste la position du joueur 
 		
 		//si position change alors : 
 		
 		if(position[][]==[4][4]) {
-			System.out.println("Bravo, vous avez trouvé le trésor et terminé le labyrinthe !");
+			System.out.println("Bravo, vous avez trouvï¿½ le trï¿½sor et terminï¿½ le labyrinthe !");
 			return true;
 		}
 		else {
@@ -53,7 +53,7 @@ public class ServeurJeu extends UnicastRemoteObject implements JServeurInterface
 	
 		if(isLabFini()==true) {
 			
-			//modifier la position du joueur à position[1][1]
+			//modifier la position du joueur ï¿½ position[1][1]
 		}
 		
 		return 0;
