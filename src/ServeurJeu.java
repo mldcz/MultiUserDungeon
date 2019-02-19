@@ -34,7 +34,7 @@ public class ServeurJeu extends UnicastRemoteObject implements JServeurInterface
 	
 	
 	public boolean isLabFini() throws RemoteException{
-		//position[][] � cr�er, on teste la position du joueur 
+		//position[][] a creer, on teste la position du joueur 
 		
 		//si position change alors : 
 		
