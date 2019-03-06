@@ -1,12 +1,6 @@
 public class Joueur extends Combattant {
-	
-	public String getNomJ() {
-		return nomJ;
-	}
 
-	public void setNomJ(String nomJ) {
-		this.nomJ = nomJ;
-	}
+
 	private String nomJ;
 	
 	public Joueur (String nomJ) {
@@ -16,15 +10,18 @@ public class Joueur extends Combattant {
 	}
 	
 	public void setPointsVie(int pointsVie) {
-		super.setPointsVie(pointsVie);
+		return super.setPointsVie(pointsVie);
+	}
+
+	public void setNomJ(String nomJ) {
+		return this.nomJ = nomJ;
 	}
 
 	public int getPointsVie() {
 		return super.getPointsVie();
 	}
-
-	public void getPosition() {
-		super.getPosition();
+	public String getNomJ() {
+		return this.nomJ;
 	}
 
 	public void seDeplacer () {
