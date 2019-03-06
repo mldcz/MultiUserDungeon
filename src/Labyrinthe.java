@@ -10,8 +10,8 @@ import java.util.Vector;
 public class Labyrinthe {
 	
 	//colonnes et lignes du labyrinthe 
-	public int X;
-	public int Y = 2;
+	//public int X;
+	//public int Y = 2;
 	
 	//tableau des cases du labyrinthe 
 	String tabPiece[][];
@@ -52,15 +52,17 @@ public class Labyrinthe {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
 
-		X = Joueur.getPositionX();
-        Y = Joueur.getPositionY();
+        int X = Joueur.getPositionX();
+        int Y = Joueur.getPositionY();
 
+        //utiliser les index du tableau avec X et Y 
+        
         //récupérer la position
 		//faire un while (tant que pas exit du lab)
         switch(tabPiece[X][Y]) {
 
-            case (X==1 & Y==1) :
-            	Joueur.setPosition = tabPiece[1][1]
+            case (X==1 && Y==1) :
+            	Joueur.setPosition = tabPiece[1][1];
                 System.out.println("Vous êtes dans la salle 1. Ou aller ensuite ? N ou E ?");
 
                 if(str=="N") {
