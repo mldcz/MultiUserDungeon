@@ -24,11 +24,6 @@ public class Joueur extends Combattant {
 		return this.nomJ;
 	}
 
-	public void seDeplacer () {
-		
-	}
-	public void prendreLaFuite () {
-		
-	}
+
 	
 }
