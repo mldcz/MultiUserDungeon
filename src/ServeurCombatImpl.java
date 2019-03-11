@@ -13,7 +13,7 @@ public class ServerCombatImpl  extends UnicastRemoteObject implements ServerComb
         super();
     }
 
-    public void initialisationCombat(Combattant c1, Combattant c1)  throws RemoteException {
+    public void initialisationCombat(Combattant c1, Combattant c2)  throws RemoteException {
         this.c1 = c1;
         this.c2 = c2;
     }
