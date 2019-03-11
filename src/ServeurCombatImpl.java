@@ -2,7 +2,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Scanner;
 
-import Combattant;
+import src.Combattant;
 
 public class ServerCombatImpl  extends UnicastRemoteObject implements ServerCombatInterface{
 
