@@ -6,7 +6,6 @@ import Combattant;
 
 public class ServerCombatImpl  extends UnicastRemoteObject implements ServerCombatInterface{
 
-    private static final long serialVersionUID = 1L;
     private Combattant c1;
     private Combattant c2;
 
