@@ -1,6 +1,3 @@
-/**
- *
- */
 public class Combattant {
 	
 	protected int pointsVie;

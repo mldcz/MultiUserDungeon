@@ -1,16 +1,25 @@
+import java.rmi.AlreadyBoundException;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
 public class ServeurCombat {
-	
-	public static ArrayList<String> listeCombats = new ArrayList<String>();
-	
-	public void nouveauCombat(Combattant Combattant) {
-		
-	}
+    public static void main(String args[]) throws RemoteException, AlreadyBoundException {
 
-	public void prendreLaFuite () {
-		Scanner sc = new Scanner(System.in);
-		String str = sc.nextLine();
+        try {
 
-		System.out.println("Vous êtes dans la salle 1. Ou aller ensuite ? N ou E ?");
-	}
-	
+            Registry reg = null;
+            reg = LocateRegistry.getRegistry(1010); // On recup registry du jeu pour crée new service dessus
+
+            Naming.rebind("ServeurCombat", new ServerCombatImpl());// remoteService
+            System.err.println("Serveur de combat prêt");
+        } catch (Exception ex) {
+            System.out.println(ex.toString());
+            ex.printStackTrace();
+            System.out.println("Could not register RemoteService");
+            System.exit(1);
+        }
+
+    }
 }
