@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+
 import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 
 public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceServeurPrincipal
@@ -15,18 +16,21 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	 */
 	
 	HashMap <String, Client> hmClientsLab;
-	ArrayList <Client> hmClientsStockes;
-	Joueur joueur;
-	Labyrinthe labyrinthe;
+    ArrayList <Client> hmClientsStockes;
+    Joueur joueur;
+    Labyrinthe labyrinthe;
 	
 	//main
 	public static void main()
 	{
 		try 
 		{
+            Registry reg = LocateRegistry.createRegistry(1010);
 			ServeurPrincipal serveurPrincipal = new ServeurPrincipal();
 			serveurPrincipal.creationLab();
-			System.out.println("Serveur démarré !");
+			System.out.println("Serveur demarre !");
+			reg.rebind("rmi://127.0.0.78:1010/server", serveurPrincipal);
+                System.out.println("Server started ! ");
 		} 
 		catch (RemoteException e) 
 		{
@@ -55,7 +59,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 			
 			if (hmClientsStockes.contains(scanner.toString()))
 			{
-				System.out.println("Pseudo déjà pris.");
+				System.out.println("Pseudo dï¿½jï¿½ pris.");
 			}
 			else
 			{
@@ -117,7 +121,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	{
 		this.labyrinthe = new Labyrinthe();
 		this.labyrinthe.generationPiece();
-		System.out.println("Création du labyrinthe ok ! ");
+		System.out.println("Crï¿½ation du labyrinthe ok ! ");
 		
 	}
 
@@ -131,7 +135,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	{
 		if (this.labyrinthe.tabPiece.toString() == "N,S,T" && joueur.getPosition() == 44)
 		{
-			System.out.println("Vous avez trouvé le trésor !");
+			System.out.println("Vous avez trouvï¿½ le trï¿½sor !");
 			return true;
 		}
 		else
@@ -155,7 +159,12 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 		return hmClientsLab.toString();
 	}
 
-
-
-
 }
+
+
+
+
+
+
+
+

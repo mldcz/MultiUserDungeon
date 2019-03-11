@@ -3,14 +3,6 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Scanner;
 
-/**
- * 
- */
-
-/**
- * @author mdachez
- *
- */
 public class Client extends UnicastRemoteObject implements InterfaceClient, Serializable
 {
 	/**

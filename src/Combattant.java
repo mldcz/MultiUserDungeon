@@ -1,33 +1,95 @@
-public class Combattant {
-	
-	protected int pointsVie;
-	private int positionX;
-	private int positionY;
+public class Combattant
+{
+	//attributs
+	private int pointsVie;
 	private boolean estVictorieux;
-	
-	
-	public boolean attaquer (String NomJ) {
-		
+	private Position position()
+
+
+	//constructeur
+	public Combattant(int positionXinitiale, int positionYinitiale)
+	{
+		this.estVictorieux = false;
+		this.position() = new Position(positionXinitiale,positionYinitiale);
 	}
-	public void setPointsVie (int pointsVie) {
+
+
+	//accesseurs
+	public Position getPosition()
+	{
+		return position();
+	}
+
+	public void setPointsVie (int pointsVie)
+	{
 		this.pointsVie = pointsVie;
 	}
-	public int getPointsVie() {
+
+	public int getPointsVie()
+	{
 		return pointsVie;
 	}
-	public void getPositionX() {
-		return this.positionX;
-	}
-	public void getPositionY() {
-		return this.positionY;
+
+	public void setEstVictorieux (boolean resultVictoire)
+	{
+		this.estVictorieux = resultVictoire;
 	}
 
-	public int setPositionX(int pos) {
-		return this.positionX = pos;
+	public boolean getEstVictorieux()
+	{
+		return estVictorieux;
 	}
 
-	public int setPositionY(int pos){
-		return this.positionY = pos;
+
+	//methodes
+	public void attaquer(String adversaire)
+	{
+		System.out.println(" "); //saut de ligne
+		System.out.println("Lancement d'une attaque !");
+
+		this.estVictorieux=false;
+		adversaire.setEstVictorieux(false);
+		int attaque = Math.Random();
+
+
+		if ( (this.pointsVie != 0) && (adversaire.getPointsVie() != 0 ))
+		{
+			if (attaque == 0)
+			{
+				this.pointsVie--;
+				System.out.println(" "); //saut de ligne
+				System.out.println("Vous perdez un point de vie.");
+				System.out.println("Vos points de vie actuels : "+this.pointsVie); //saut de ligne
+				System.out.println("Les points de vie de l'adversaire : "+ adversaire.getPointsVie()); //saut de ligne
+				System.out.println(" "); //saut de ligne
+			}
+			else
+			{
+				adversaire.setPointsVie(getPointsVie()- 1);
+				System.out.println(" "); //saut de ligne
+				System.out.println("L'adversaire perd un point de vie.");
+				System.out.println("Vos points de vie actuels : "+this.pointsVie); //saut de ligne
+				System.out.println("Les points de vie de l'adversaire : "+ adversaire.getPointsVie()); //saut de ligne
+				System.out.println(" "); //saut de ligne
+			}
+		}
+		else if ( (this.pointsVie == 0) && (adversaire.getPointsVie() != 0 ))
+		{
+			adversaire.setEstVictorieux(true);
+			System.out.println("Vous ne pouvez plus combattre, vous n'avez plus de vie !");
+		}
+		else if ( (this.pointsVie != 0) && (adversaire.getPointsVie() == 0 ))
+		{
+			estVictorieux = true;
+			System.out.println("L'adversaire ne peut combattre, il n'a plus de vie !");
+		}
+		else( (this.pointsVie == 0) && (adversaire.getPointsVie() == 0 ))
+		{
+
+			System.out.println("Combat impossible, aucun de vous n'a de point de vie. !");
+		}
 	}
+
+
 
 }

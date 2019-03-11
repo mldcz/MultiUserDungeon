@@ -1,22 +1,14 @@
-/**
- * 
- */
-
-/**
- * @author mdachez
- *
- */
-
-
 import java.rmi.*;
 import java.util.HashMap;
+import java.util.Scanner;
 	
 	
 public interface InterfaceServeurPrincipal extends java.rmi.Remote 
 {
 	//public String getInformations() throws java.rmi.RemoteException;
-	public void creerJoueur(String pseudo) throws java.rmi.RemoteException;
+	public void creerJoueur(String id, String pseudo) throws java.rmi.RemoteException;
 	public void supprimerJoueur(Joueur joueur) throws java.rmi.RemoteException;
+	public Position position(String id);
 	public String affichageAuthentification() throws java.rmi.RemoteException;
 	//public void verification() throws java.rmi.RemoteException;
 	public boolean interrogeDisponibilite() throws java.rmi.RemoteException;
@@ -29,6 +21,7 @@ public interface InterfaceServeurPrincipal extends java.rmi.Remote
 	public boolean isLabFini() throws java.rmi.RemoteException;
 	public boolean exitLab() throws java.rmi.RemoteException;
 	public String getListJoueur()throws java.rmi.RemoteException;
+	public void generationPiece(String tabPiece[][]) throws RemoteException;
 	
 	
 	
