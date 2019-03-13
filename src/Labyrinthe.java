@@ -7,7 +7,10 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Vector;
-public class Labyrinthe {
+
+
+public class Labyrinthe
+{
 	
 	//colonnes et lignes du labyrinthe 
 	//public int X;
@@ -21,7 +24,8 @@ public class Labyrinthe {
 	//test
 	
 	//creation des pieces du labyrinthe O,N,E,S repr�sentent les possibilit�s de d�placement, M indique la pr�sence d'un monstre, T est le tr�sor
-	public void generationPiece(String tabPiece[][]){
+	public void generationPiece(String tabPiece[][])
+	{
 		
 		tabPiece[1][1]="N,E";
 		tabPiece[1][2]="O,E";
@@ -51,7 +55,8 @@ public class Labyrinthe {
 		
 	}
 
-    public void seDeplacer () {
+    public void seDeplacer ()
+	{
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
 
@@ -62,18 +67,21 @@ public class Labyrinthe {
         
         //récupérer la position
 		//faire un while (tant que pas exit du lab)
-        switch(tabPiece[X][Y]) {
+        switch(tabPiece[X][Y])
+		{
 
             case (X==1 && Y==1) :
             	Joueur.setPosition = tabPiece[1][1];
-                System.out.println("Vous êtes dans la salle 1. Ou aller ensuite ? N ou E ?");
+                System.out.println("Vous etes dans la salle 1. Ou aller ensuite ? N ou E ?");
 
-                if(str=="N") {
+                if(str=="N")
+                {
                     X=2;
                     Y=1;
 
                 }
-                else if (str=="E") {
+                else if (str=="E")
+                {
                     X=1;
                     Y=2;
 
@@ -81,14 +89,15 @@ public class Labyrinthe {
 
                 break;
 
-            default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
+            default: System.out.println("Vous avez rentre un mauvais choix veuillez réessayer :");
 
         }
-		switch(tabPiece[X][Y]) {
+		switch(tabPiece[X][Y])
+		{
 
 			case (X==1 && Y==2) :
 				Joueur.setPosition = tabPiece[1][2];
-				System.out.println("Vous êtes dans la salle 2. Ou aller ensuite ? O ou E ?");
+				System.out.println("Vous etes dans la salle 2. Ou aller ensuite ? O ou E ?");
 
 				if(str=="0") {
 					X=1;
