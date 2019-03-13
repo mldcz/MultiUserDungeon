@@ -8,6 +8,9 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 	/**
 	 * @param args
 	 */
+
+	//test
+
 	public Joueur player;
 	public String pseudo;
 	public String mdp;
