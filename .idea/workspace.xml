@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="918c17ba-5156-431e-b6a3-f32756137bd9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Labyrinthe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Labyrinthe.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +25,33 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Combattant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="742">
+              <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+              <folding>
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Labyrinthe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="588" column="8" selection-start-line="588" selection-start-column="8" selection-end-line="588" selection-end-column="8" />
+            <state relative-caret-position="1639">
+              <caret line="588" selection-start-line="588" selection-end-line="588" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,6 +71,7 @@
         <option value="$PROJECT_DIR$/src/Joueur.java" />
         <option value="$PROJECT_DIR$/src/Client.java" />
         <option value="$PROJECT_DIR$/src/Labyrinthe.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -87,7 +110,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552489048223" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552491913069" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -115,7 +138,7 @@
       <updated>1551878117787</updated>
       <workItem from="1551878118999" duration="3224000" />
       <workItem from="1552483741507" duration="101000" />
-      <workItem from="1552488667220" duration="381000" />
+      <workItem from="1552488667220" duration="1101000" />
     </task>
     <task id="LOCAL-00001" summary="MAJ Labyrinthe">
       <created>1551878654324</created>
@@ -145,17 +168,24 @@
       <option name="project" value="LOCAL" />
       <updated>1552488717420</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="MAJ switch case Labyrinthe">
+      <created>1552489088238</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1552489088238</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3706000" />
+    <option name="totallyTimeSpent" value="4426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -175,7 +205,7 @@
       <window_info anchor="bottom" id="Sequence" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.124661244" />
+      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.124661244" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -194,23 +224,14 @@
     <MESSAGE value="MAJ Labyrinthe" />
     <MESSAGE value="MAJ seDeplacer" />
     <MESSAGE value="Merge branch 'master' of https://github.com/mldcz/MultiUserDungeon&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/mldcz/MultiUserDungeon&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="MAJ switch case Labyrinthe" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAJ switch case Labyrinthe" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Combattant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="23" selection-start-line="20" selection-start-column="5" selection-end-line="23" />
-          <folding>
-            <element signature="e#465#466#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -226,11 +247,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Labyrinthe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="588" column="8" selection-start-line="588" selection-start-column="8" selection-end-line="588" selection-end-column="8" />
+        <state relative-caret-position="1639">
+          <caret line="588" selection-start-line="588" selection-end-line="588" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Combattant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+          <folding>
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
