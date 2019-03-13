@@ -16,22 +16,18 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	 */
 	
 	HashMap <String, Client> hmClientsLab;
-    ArrayList <Client> hmClientsStockes;
     Joueur joueur;
     Labyrinthe labyrinthe;
 	
 	//main
 	public static void main()
 	{
-		try 
+		try
 		{
-            Registry reg = LocateRegistry.createRegistry(1010);
-			ServeurPrincipal serveurPrincipal = new ServeurPrincipal();
-			serveurPrincipal.creationLab();
+			LocateRegistry.createRegistry(1099);
+			Naming.rebind("ServeurPrincipal", new serveurPrincipal());
 			System.out.println("Serveur demarre !");
-			reg.rebind("rmi://127.0.0.78:1010/server", serveurPrincipal);
-                System.out.println("Server started ! ");
-		} 
+		}
 		catch (RemoteException e) 
 		{
 			System.out.println("Erreur lors du lancement du serveur");
@@ -59,12 +55,11 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 			
 			if (hmClientsStockes.contains(scanner.toString()))
 			{
-				System.out.println("Pseudo d�j� pris.");
+				System.out.println("Pseudo deja pris.");
 			}
 			else
 			{
-				hmClientsLab.Add(pseudo, new Client(pseudo));
-				hmClientsStockes.Add(new Client(pseudo));
+				hmClientsLab.put(pseudo, new Client(pseudo));
 				System.out.println("Bienvenue " + pseudo + " !");
 				condition = true;
 			}
@@ -78,12 +73,18 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	{
 		if (hmClientsLab.containsValue(client))
 		{
-			hmClientsLab.remove(client);
+			for (Map.Entry<String,String> e : hmClientsLab.entrySet())
+			{
+				if (e.getValue() == client )
+				{
+					hmClientsLab.Remove(e.getKey(), e.getValue());
+				}
+			}
 		}
 	}
 
 	
-	public synchronized String affichageAuthentification() throws RemoteException 
+	public  String affichageAuthentification() throws RemoteException
 	{
 		
 		System.out.println();
@@ -121,7 +122,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	{
 		this.labyrinthe = new Labyrinthe();
 		this.labyrinthe.generationPiece();
-		System.out.println("Cr�ation du labyrinthe ok ! ");
+		System.out.println("Creation du labyrinthe ok ! ");
 		
 	}
 
@@ -135,7 +136,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	{
 		if (this.labyrinthe.tabPiece.toString() == "N,S,T" && joueur.getPosition() == 44)
 		{
-			System.out.println("Vous avez trouv� le tr�sor !");
+			System.out.println("Vous avez trouve le tresor !");
 			return true;
 		}
 		else
