@@ -23,4 +23,8 @@
 hs_err_pid*
 /bin/
 
-workspace.xml
+/.idea/
+/.metadata/
+/.settings/
+/src/.classpath
+/src/.project

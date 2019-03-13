@@ -24,6 +24,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	{
 		try
 		{
+			//cccc
 			LocateRegistry.createRegistry(1099);
 			Naming.rebind("ServeurPrincipal", new serveurPrincipal());
 			System.out.println("Serveur demarre !");
