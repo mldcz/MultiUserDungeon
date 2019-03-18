@@ -53,6 +53,9 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 
 	}
 	
+	public void getMessage(String s)  throws RemoteException {
+		System.out.println(s);
+	}
 
 
 
