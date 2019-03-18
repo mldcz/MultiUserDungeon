@@ -3,7 +3,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Scanner;
 
-public class Client extends UnicastRemoteObject implements InterfaceClient, Serializable
+public class Client extends UnicastRemoteObject implements InterfaceClient, Serializable, Unreferenced
 {
 	/**
 	 * @param args
@@ -24,6 +24,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 	//constructor
 	public Client()
 	{
+		super();
 		System.out.println("Veuillez entre un pseudo : ");
 		Scanner scanner = new Scanner(System.in);
 		this.pseudo = scanner.toString();
@@ -31,51 +32,26 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 		scanner = new Scanner(System.in);
 		this.mdp = scanner.toString();
 		this.player = new Joueur(pseudo);
-		
-	}
-
-
-	public String getPseudo() throws RemoteException
-	{
-
-		return null;
-	}
-
-
-	public void seConnecter() throws RemoteException
-	{
 
 		
 	}
 
 
-	public void enregistrer() throws RemoteException
-	{
+	public String getPseudo() throws RemoteException { return this.pseudo;	}
+	public String getMdp() throws RemoteException 	{ return this.mdp; }
 
+
+	public Position position(String X, String Y) throws RemoteException
+	{
+		return position;
 	}
 
 
-	public String getInformations() throws RemoteException 
+
+	public void unreferenced()
 	{
 
-		return null;
 	}
-
-
-	public void saisieLoginMDP() throws RemoteException 
-	{
-
-		
-	}
-
-	public String donnePosition() throws RemoteException
-	{
-		return null;
-	}
-
-	public void getMessage(String s)  throws RemoteException {
-		System.out.println(s);
-}
 	
 
 

@@ -7,9 +7,9 @@ public interface InterfaceServeurPrincipal extends java.rmi.Remote
 {
 	//public String getInformations() throws java.rmi.RemoteException;
 	public void creerJoueur(String id, String pseudo) throws java.rmi.RemoteException;
-	public void supprimerJoueur(Joueur joueur) throws java.rmi.RemoteException;
-	public Position position(String id);
-	public String affichageAuthentification() throws java.rmi.RemoteException;
+	public void supprimerJoueur(Joueur joueur) osition(String id);
+	public String affichageAuthentification() throws throws java.rmi.RemoteException;
+	public Position pjava.rmi.RemoteException;
 	//public void verification() throws java.rmi.RemoteException;
 	public boolean interrogeDisponibilite() throws java.rmi.RemoteException;
 	public void authentification() throws java.rmi.RemoteException;

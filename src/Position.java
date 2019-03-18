@@ -23,16 +23,10 @@ public class Position implements Serializable
     }
 
 
-    public void setPositionX(int pos)
-    {
-        return this.positionX = pos;
-    }
+    public void setPositionX(int pos) {this.positionX = pos;  }
 
 
-    public void setPositionY(int pos)
-    {
-        return this.positionY = pos;
-    }
+    public void setPositionY(int pos) {this.positionY = pos;}    }
 
 
     public String toString()

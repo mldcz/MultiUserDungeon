@@ -15,19 +15,21 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	 * @param args
 	 */
 	
-	HashMap <String, Client> hmClientsLab;
-    Joueur joueur;
-    Labyrinthe labyrinthe;
-	
+	private HashMap <String, Client> hmClientsLab;
+    private Joueur joueur;
+    private Labyrinthe labyrinthe;
+	private String name;
 	//main
 	public static void main()
 	{
 		try
 		{
-			//c
+			//Démarre le rmiregistry
 			LocateRegistry.createRegistry(1099);
-			Naming.rebind("ServeurPrincipal", new ServeurPrincipal());
-			System.out.println("Serveur demarre !");
+			ServeurPrincipal obj = new ServeurPrincipal("ServeurPrincipal");
+			Naming.rebind("ServeurPrincipal", obj);
+			System.out.println("ServeurPrincipal déclaré auprès du service de nom.");
+
 		}
 		catch (RemoteException e) 
 		{
@@ -36,9 +38,10 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	}
 	
 	//Constructor
-	public ServeurPrincipal() throws RemoteException
+	public ServeurPrincipal(String s) throws RemoteException
 	{
 		super();
+		this.name = s;
 		hmClientsLab = new HashMap<String, Client>();
 		hmClientsStockes = new ArrayList<Client>();
 		
