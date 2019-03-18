@@ -91,10 +91,6 @@ public class Labyrinthe
 
             default: System.out.println("Vous avez rentre un mauvais choix veuillez réessayer :");
 
-        }
-		switch(tabPiece[X][Y])
-		{
-
 			case (X==1 && Y==2) :
 				Joueur.setPosition = tabPiece[1][2];
 				System.out.println("Vous etes dans la salle 2. Ou aller ensuite ? O ou E ?");
@@ -113,9 +109,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==1 && Y==3) :
 				Joueur.setPosition = tabPiece[1][3];
@@ -140,9 +133,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==1 && Y==4) :
 				Joueur.setPosition = tabPiece[1][4];
 				System.out.println("Vous êtes dans la salle 4. Ou aller ensuite ? O, N ou E ?");
@@ -166,9 +156,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==1 && Y==5) :
 				Joueur.setPosition = tabPiece[1][5];
 				System.out.println("Vous êtes dans la salle 5. Ou aller ensuite ? N ou O ?");
@@ -187,9 +174,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==2 && Y==1) :
 				Joueur.setPosition = tabPiece[2][1];
@@ -215,9 +199,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==2 && Y==2) :
 				Joueur.setPosition = tabPiece[2][2];
 				System.out.println("Vous êtes dans la salle 7. Ou aller ensuite ? O ?");
@@ -232,9 +213,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==2 && Y==3) :
 				Joueur.setPosition = tabPiece[2][3];
@@ -260,9 +238,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==2 && Y==4) :
 				Joueur.setPosition = tabPiece[2][4];
 				System.out.println("Vous êtes dans la salle 9. Ou aller ensuite ? N, S ou O ?");
@@ -287,9 +262,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==2 && Y==5) :
 				Joueur.setPosition = tabPiece[2][5];
 				System.out.println("Vous êtes dans la salle 10. Ou aller ensuite ? S ?");
@@ -304,9 +276,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==3 && Y==1) :
 				Joueur.setPosition = tabPiece[3][1];
@@ -332,9 +301,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==3 && Y==2) :
 				Joueur.setPosition = tabPiece[3][2];
 				System.out.println("Vous êtes dans la salle 12. Ou aller ensuite ? N, O ou E ?");
@@ -359,9 +325,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==3 && Y==3) :
 				Joueur.setPosition = tabPiece[3][3];
 				System.out.println("Vous êtes dans la salle 13. Ou aller ensuite ? S ou O ?");
@@ -381,9 +344,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==3 && Y==4) :
 				Joueur.setPosition = tabPiece[3][4];
@@ -409,9 +369,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==3 && Y==5) :
 				Joueur.setPosition = tabPiece[3][5];
 				System.out.println("Vous êtes dans la salle 15. Ou aller ensuite ? N ou O ?");
@@ -431,9 +388,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==4 && Y==1) :
 				Joueur.setPosition = tabPiece[4][1];
@@ -455,9 +409,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==4 && Y==2) :
 				Joueur.setPosition = tabPiece[4][2];
 				System.out.println("Vous êtes dans la salle 17. Ou aller ensuite ? S ou E ?");
@@ -476,9 +427,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==4 && Y==3) :
 				Joueur.setPosition = tabPiece[4][3];
@@ -500,9 +448,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==4 && Y==4) :
 				Joueur.setPosition = tabPiece[4][4];
 				System.out.println("Vous êtes dans la salle 19. Ou aller ensuite ? N ou S ?");
@@ -522,9 +467,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==4 && Y==5) :
 				Joueur.setPosition = tabPiece[4][5];
@@ -546,9 +488,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==5 && Y==1) :
 				Joueur.setPosition = tabPiece[5][1];
 				System.out.println("Vous êtes dans la salle 21. Ou aller ensuite ? S ou E ?");
@@ -568,9 +507,6 @@ public class Labyrinthe
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
 
-		}
-		switch(tabPiece[X][Y]) {
-
 			case (X==5 && Y==2) :
 				Joueur.setPosition = tabPiece[5][2];
 				System.out.println("Vous êtes dans la salle 22. Ou aller ensuite ? O ?");
@@ -585,9 +521,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==5 && Y==3) :
 				Joueur.setPosition = tabPiece[5][3];
@@ -607,9 +540,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==5 && Y==4) :
 				Joueur.setPosition = tabPiece[5][4];
@@ -634,9 +564,6 @@ public class Labyrinthe
 				break;
 
 			default: System.out.println("Vous avez rentré un mauvais choix veuillez réessayer :");
-
-		}
-		switch(tabPiece[X][Y]) {
 
 			case (X==5 && Y==5) :
 				Joueur.setPosition = tabPiece[5][5];
