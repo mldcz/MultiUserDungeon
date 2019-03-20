@@ -33,16 +33,13 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 
 		while (sortie != true)
 		{
-			System.out.println("Vous êtes dans la piece :" + joueur.getPosition());
-			System.out.println("");
-
-
-
 			boolean entreeClavier = true;
 
 			while (entreeClavier != false)
 			{
-				System.out.println("Taper N pour aller au Nord, S pour aller au Sud, E pour aller a l'Est, O pour aller à l'Ouest ou EXIT pour quitter le labyrinthe.");
+                System.out.println("Vous etes dans la piece :" + joueur.getPosition());
+                System.out.println("");
+            	System.out.println("Taper N pour aller au Nord, S pour aller au Sud, E pour aller a l'Est, O pour aller à l'Ouest ou EXIT pour quitter le labyrinthe.");
 
 				Scanner scanner = new Scanner(System.in);
 				String str = scanner.nextLine();
