@@ -50,18 +50,18 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 		this.labyrinthe.generationPiece();
 	}
 
-	public synchronized boolean creerJoueur() throws RemoteException
+	public synchronized boolean creerJoueur(String str) throws RemoteException
 	{
-		f (hmClientsStockes.contains(str))
+		if (hmClientsLab.contains(str))
 		{
 			System.out.println("Pseudo deja pris.");
-			return false
+			return false;
 		}
 		else
 		{
-			Client client = new Client(pseudo);
+			Client client = new Client(str);
 			hmClientsLab.put(i,client);
-			System.out.println("Bienvenue " + pseudo + " !");
+			System.out.println("Bienvenue " + str + " !");
 			i++;
 			return true;
 		}
@@ -85,29 +85,17 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	
 
 
-	public synchronized boolean interrogeDisponibilite() throws RemoteException 
-	{
-		return false;
-	}
-
 	public synchronized void authentification() throws RemoteException 
 	{
-		
+		//to be implemented
 	}
 
-	public synchronized String recupererInformations() throws RemoteException
-	{
-		return null;
-	}
 
 	public synchronized void desinscription(Client client) throws RemoteException 
     {
-		hmClientsLab.remove(joueur., new Client(pseudo));
-		hmClientsStockes.Add(new Client(pseudo));
+		//hmClientsLab.remove(joueur., new Client(pseudo));
+		// hmClientsStockes.Add(new Client(pseudo));
 	}
-
-	public synchronized void getPositionJoueur(Joeur)
-
 
 
 
