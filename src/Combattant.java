@@ -7,10 +7,10 @@ public class Combattant
 
 
 	//constructeur
-	public Combattant(int positionXinitiale, int positionYinitiale)
+	public Combattant()
 	{
 		this.estVictorieux = false;
-		this.position() = new Position(positionXinitiale,positionYinitiale);
+		this.position() = new Position(1,1);
 	}
 
 
