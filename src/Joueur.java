@@ -68,8 +68,8 @@ public class Joueur extends Combattant {
 				}
 				else if (str=="E")
 				{
-					X=1;
-					Y=2;
+					this.setPositionX(1);
+					this.setPositionY(2);
 
 				}
 
@@ -80,13 +80,13 @@ public class Joueur extends Combattant {
 				System.out.println("Vous etes dans la salle 2. Ou aller ensuite ? O ou E ?");
 
 				if(str=="0") {
-					X=1;
-					Y=1;
+					this.setPositionX(1);
+					this.setPositionY(1);
 
 				}
 				else if(str=="E") {
-					X=1;
-					Y=3;
+					this.setPositionX(1);
+					this.setPositionY(3);
 
 				}
 
@@ -97,18 +97,18 @@ public class Joueur extends Combattant {
 				System.out.println("Vous êtes dans la salle 3. Ou aller ensuite ? O, N ou E ?");
 
 				if(str=="O") {
-					X=1;
-					Y=2;
+					this.setPositionX(1);
+					this.setPositionY(2);
 
 				}
 				else if (str=="N") {
-					X=2;
-					Y=3;
+					this.setPositionX(2);
+					this.setPositionY(3);
 
 				}
 				else if (str=="E") {
-					X=1;
-					Y=4;
+					this.setPositionX(1);
+					this.setPositionY(4);
 				}
 
 				break;
@@ -118,18 +118,18 @@ public class Joueur extends Combattant {
 				System.out.println("Vous êtes dans la salle 4. Ou aller ensuite ? O, N ou E ?");
 
 				if(str=="O") {
-					X=1;
-					Y=3;
+					this.setPositionX(1);
+					this.setPositionY(3);
 
 				}
 				else if (str=="N") {
-					X=2;
-					Y=4;
+					this.setPositionX(2);
+					this.setPositionY(4);
 
 				}
 				else if (str=="E") {
-					X=1;
-					Y=5;
+					this.setPositionX(1);
+					this.setPositionY(5);
 				}
 
 				break;
@@ -139,13 +139,13 @@ public class Joueur extends Combattant {
 				System.out.println("Vous êtes dans la salle 5. Ou aller ensuite ? N ou O ?");
 
 				if(str=="N") {
-					X=2;
-					Y=5;
+					this.setPositionX(2);
+					this.setPositionY(5);
 
 				}
 				else if(str=="E") {
-					X=1;
-					Y=4;
+					this.setPositionX(1);
+					this.setPositionY(4);
 
 				}
 
@@ -157,18 +157,18 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=3;
-					Y=1;
+					this.setPositionX(3);
+					this.setPositionY(1);
 
 				}
 				else if (str=="S") {
-					X=1;
-					Y=1;
+					this.setPositionX(1);
+					this.setPositionY(1);
 
 				}
 				else if (str=="E") {
-					X=2;
-					Y=2;
+					this.setPositionX(2);
+					this.setPositionY(2);
 				}
 
 				break;
@@ -179,8 +179,8 @@ public class Joueur extends Combattant {
 
 
 				if(str=="O") {
-					X=2;
-					Y=1;
+					this.setPositionX(2);
+					this.setPositionY(1);
 
 				}
 
@@ -192,18 +192,18 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=3;
-					Y=3;
+					this.setPositionX(3);
+					this.setPositionY(3);
 
 				}
 				else if (str=="S") {
-					X=1;
-					Y=3;
+					this.setPositionX(1);
+					this.setPositionY(3);
 
 				}
 				else if (str=="E") {
-					X=2;
-					Y=4;
+					this.setPositionX(2);
+					this.setPositionY(4);
 				}
 
 				break;
@@ -214,18 +214,18 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=3;
-					Y=4;
+					this.setPositionX(3);
+					this.setPositionY(4);
 
 				}
 				else if (str=="S") {
-					X=1;
-					Y=4;
+					this.setPositionX(1);
+					this.setPositionY(4);
 
 				}
 				else if (str=="O") {
-					X=2;
-					Y=3;
+					this.setPositionX(2);
+					this.setPositionY(3);
 				}
 
 				break;
@@ -236,8 +236,8 @@ public class Joueur extends Combattant {
 
 
 				if(str=="S") {
-					X=1;
-					Y=5;
+					this.setPositionX(1);
+					this.setPositionY(5);
 
 				}
 
@@ -249,18 +249,18 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=4;
-					Y=1;
+					this.setPositionX(4);
+					this.setPositionY(1);
 
 				}
 				else if (str=="S") {
-					X=2;
-					Y=1;
+					this.setPositionX(2);
+					this.setPositionY(1);
 
 				}
 				else if (str=="E") {
-					X=3;
-					Y=2;
+					this.setPositionX(3);
+					this.setPositionY(2);
 				}
 
 				break;
@@ -271,18 +271,18 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=4;
-					Y=2;
+					this.setPositionX(4);
+					this.setPositionY(2);
 
 				}
 				else if (str=="O") {
-					X=3;
-					Y=1;
+					this.setPositionX(3);
+					this.setPositionY(1);
 
 				}
 				else if (str=="E") {
-					X=3;
-					Y=3;
+					this.setPositionX(3);
+					this.setPositionY(3);
 				}
 
 				break;
@@ -293,13 +293,13 @@ public class Joueur extends Combattant {
 
 
 				if(str=="O") {
-					X=3;
-					Y=2;
+					this.setPositionX(3);
+					this.setPositionY(2);
 
 				}
 				else if (str=="S") {
-					X=2;
-					Y=3;
+					this.setPositionX(2);
+					this.setPositionY(3);
 
 				}
 
@@ -311,18 +311,18 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=4;
-					Y=4;
+					this.setPositionX(4);
+					this.setPositionY(4);
 
 				}
 				else if (str=="S") {
-					X=2;
-					Y=4;
+					this.setPositionX(2);
+					this.setPositionY(4);
 
 				}
 				else if (str=="E") {
-					X=3;
-					Y=5;
+					this.setPositionX(3);
+					this.setPositionY(5);
 				}
 
 				break;
@@ -333,13 +333,13 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=4;
-					Y=5;
+					this.setPositionX(4);
+					this.setPositionY(5);
 
 				}
 				else if (str=="O") {
-					X=3;
-					Y=4;
+					this.setPositionX(3);
+					this.setPositionY(4);
 
 				}
 
@@ -351,13 +351,13 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=5;
-					Y=1;
+					this.setPositionX(5);
+					this.setPositionY(1);
 
 				}
 				else if (str=="S") {
-					X=3;
-					Y=1;
+					this.setPositionX(3);
+					this.setPositionY(1);
 
 				}
 
@@ -369,13 +369,13 @@ public class Joueur extends Combattant {
 
 
 				if (str=="S") {
-					X=3;
-					Y=2;
+					this.setPositionX(3);
+					this.setPositionY(2);
 
 				}
 				else if (str=="E") {
-					X=4;
-					Y=3;
+					this.setPositionX(4);
+					this.setPositionY(3);
 				}
 
 				break;
@@ -386,13 +386,13 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=5;
-					Y=3;
+					this.setPositionX(5);
+					this.setPositionY(3);
 
 				}
 				else if (str=="O") {
-					X=4;
-					Y=2;
+					this.setPositionX(4);
+					this.setPositionY(2);
 
 				}
 
@@ -404,13 +404,13 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=5;
-					Y=4;
+					this.setPositionX(5);
+					this.setPositionY(4);
 
 				}
 				else if (str=="S") {
-					X=3;
-					Y=4;
+					this.setPositionX(3);
+					this.setPositionY(4);
 
 				}
 
@@ -422,13 +422,13 @@ public class Joueur extends Combattant {
 
 
 				if(str=="N") {
-					X=5;
-					Y=5;
+					this.setPositionX(5);
+					this.setPositionY(5);
 
 				}
 				else if (str=="S") {
-					X=3;
-					Y=5;
+					this.setPositionX(3);
+					this.setPositionY(5);
 
 				}
 
@@ -440,13 +440,13 @@ public class Joueur extends Combattant {
 
 
 				if (str=="S") {
-					X=4;
-					Y=1;
+					this.setPositionX(4);
+					this.setPositionY(1);
 
 				}
 				else if (str=="E") {
-					X=5;
-					Y=2;
+					this.setPositionX(5);
+					this.setPositionY(2);
 				}
 
 				break;
@@ -457,8 +457,8 @@ public class Joueur extends Combattant {
 
 
 				if(str=="O") {
-					X=5;
-					Y=1;
+					this.setPositionX(5);
+					this.setPositionY(1);
 
 				}
 
@@ -470,13 +470,13 @@ public class Joueur extends Combattant {
 
 
 				if (str=="S") {
-					X=4;
-					Y=3;
+					this.setPositionX(4);
+					this.setPositionY(3);
 
 				}
 				else if (str=="E") {
-					X=5;
-					Y=4;
+					this.setPositionX(5);
+					this.setPositionY(4);
 				}
 
 				break;
@@ -487,18 +487,18 @@ public class Joueur extends Combattant {
 
 
 				if(str=="O") {
-					X=5;
-					Y=3;
+					this.setPositionX(5);
+					this.setPositionY(3);
 
 				}
 				else if (str=="S") {
-					X=4;
-					Y=4;
+					this.setPositionX(4);
+					this.setPositionY(4);
 
 				}
 				else if (str=="E") {
-					X=5;
-					Y=5;
+					this.setPositionX(5);
+					this.setPositionY(5);
 				}
 
 				break;
@@ -509,13 +509,13 @@ public class Joueur extends Combattant {
 
 
 				if(str=="O") {
-					X=5;
-					Y=4;
+					this.setPositionX(5);
+					this.setPositionY(4);
 
 				}
 				else if (str=="S") {
-					X=4;
-					Y=5;
+					this.setPositionX(4);
+					this.setPositionY(5);
 
 				}
 
