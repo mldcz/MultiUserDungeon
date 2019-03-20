@@ -17,14 +17,15 @@ public class Labyrinthe
 	//public int Y = 2;
 	
 	//tableau des cases du labyrinthe 
-	String tabPiece[][];
+	
+	String tabPiece[][] = new String[6][6];
 
 
 
 	//test
 	
 	//creation des pieces du labyrinthe O,N,E,S repr�sentent les possibilit�s de d�placement, M indique la pr�sence d'un monstre, T est le tr�sor
-	public void generationPiece(String tabPiece[][])
+	public void generationPiece()
 	{
 		
 		tabPiece[1][1]="N,E";

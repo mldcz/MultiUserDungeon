@@ -20,23 +20,24 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 	public String mdp;
 	
 	//main
-	public void main(String[] args) throws RemoteException
+	public static void main(String[] args) throws RemoteException
 	{
-		ServeurPrincipal proxy;
+
+		InterfaceServeurPrincipal proxy;
 		try 
 		{
-			proxy = (ServeurPrincipal) Naming.lookup("rmi://localhost:1099/ServeurPrincipal");
+			proxy = (InterfaceServeurPrincipal) Naming.lookup("rmi://localhost:1099/ServeurPrincipal");
 		
 		boolean condition = false;
 		boolean sortie = false;
-
+		Client c = null;
 		while (condition != true)
 		{
 			System.out.println("Veuillez donner un pseudo pour votre jouer :");
 			Scanner scanner = new Scanner(System.in);
 			String str = scanner.nextLine();
-			this.pseudo = str;
-			condition = proxy.creerJoueur(this.pseudo);
+			condition = proxy.creerJoueur(str);
+			c = new Client(str);
 		}
 
 		while (sortie != true)
@@ -45,7 +46,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 
 			while (entreeClavier != false)
 			{
-                System.out.println("Vous etes dans la piece :" + joueur.getPosition());
+                System.out.println("Vous etes dans la piece :" + c.joueur.getPosition());
                 System.out.println("");
             	System.out.println("Taper N pour aller au Nord, S pour aller au Sud, E pour aller a l'Est, O pour aller à l'Ouest ou EXIT pour quitter le labyrinthe.");
 
@@ -54,7 +55,8 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 				str = str.toUpperCase();
 				if (str == "N")
 				{
-					joueur.seDeplacer(proxy.labyrinthe,"N");
+					proxy.seDeplacerServ(c.pseudo,"N");
+					//c.joueur.seDeplacer(proxy.labyrinthe,"N");
 					Monstre monstre = new Monstre();
 					System.out.println("Il y a un monstre dans la salle. Que voulez-vous faire ? 1 attaquer, 0 pour fuir");
 
@@ -69,7 +71,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 						{
 							System.out.println(" "); //saut de ligne
 							System.out.println("Lancement d'une attaque !");
-							joueur.attaquer(monstre);
+							c.joueur.attaquer(monstre);
 							choixAttaque = true;
 						}
 						else if (choix == 0)
@@ -88,7 +90,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 				}
 				else if (str == "S")
 				{
-					joueur.seDeplacer(proxy.labyrinthe,"S");
+					c.joueur.seDeplacer(proxy.labyrinthe,"S");
 					Monstre monstre = new Monstre();
 					System.out.println("Il y a un monstre dans la salle. Que voulez-vous faire ? 1 attaquer, 0 pour fuir");
 
@@ -103,7 +105,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 						{
 							System.out.println(" "); //saut de ligne
 							System.out.println("Lancement d'une attaque !");
-							joueur.attaquer(monstre);
+							c.joueur.attaquer(monstre);
 							choixAttaque = true;
 						}
 						else if (choix == 0)
@@ -121,7 +123,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 				}
 				else if (str == "O")
 				{
-					joueur.seDeplacer(proxy.labyrinthe,"O");
+					c.joueur.seDeplacer(proxy.labyrinthe,"O");
 					Monstre monstre = new Monstre();
 					System.out.println("Il y a un monstre dans la salle. Que voulez-vous faire ? 1 attaquer, 0 pour fuir");
 
@@ -136,7 +138,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 						{
 							System.out.println(" "); //saut de ligne
 							System.out.println("Lancement d'une attaque !");
-							joueur.attaquer(monstre);
+							c.joueur.attaquer(monstre);
 							choixAttaque = true;
 						}
 						else if (choix == 0)
@@ -154,7 +156,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 				}
 				else if (str == "E")
 				{
-					joueur.seDeplacer(proxy.labyrinthe, "E");
+					c.joueur.seDeplacer(proxy.labyrinthe, "E");
 					Monstre monstre = new Monstre();
 					System.out.println("Il y a un monstre dans la salle. Que voulez-vous faire ? 1 attaquer, 0 pour fuir");
 
@@ -169,7 +171,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 						{
 							System.out.println(" "); //saut de ligne
 							System.out.println("Lancement d'une attaque !");
-							joueur.attaquer(monstre);
+							c.joueur.attaquer(monstre);
 							choixAttaque = true;
 						}
 						else if (choix == 0)
@@ -187,7 +189,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 				}
 				else if (str == "EXIT")
 				{
-					proxy.exitLab(joueur);
+					proxy.exitLab(c.joueur);
 					entreeClavier = false;
 					sortie = false;
 					break;

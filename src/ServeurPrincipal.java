@@ -1,3 +1,4 @@
+import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -16,7 +17,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	 * @param args
 	 */
 	
-	protected HashMap <int, Client> hmClientsLab;
+	protected HashMap <Integer, Client> hmClientsLab;
     protected Joueur joueur;
     public Labyrinthe labyrinthe;
 	protected String name;
@@ -24,7 +25,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	
 	
 	//main
-	public static void main()
+	public static void main(String[] args)
 	{
 		try
 		{
@@ -35,9 +36,10 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 			System.out.println("ServeurPrincipal déclaré auprès du service de nom.");
 
 		}
-		catch (RemoteException e) 
+		catch (RemoteException | MalformedURLException e) 
 		{
 			System.out.println("Erreur lors du lancement du serveur");
+			e.printStackTrace();
 		}
 	}
 	
@@ -46,15 +48,15 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	{
 		super();
 		this.name = s;
-		hmClientsLab = new HashMap<int, Client>();
-		hmClientsStockes = new ArrayList<Client>();
+		hmClientsLab = new HashMap<Integer, Client>();
+		//hmClientsStockes = new ArrayList<Client>();
 		this.labyrinthe = new Labyrinthe();
 		this.labyrinthe.generationPiece();
 	}
 
 	public synchronized boolean creerJoueur(String str) throws RemoteException
 	{
-		if (hmClientsLab.contains(str))
+		if (hmClientsLab.containsValue(str))
 		{
 			System.out.println("Pseudo deja pris.");
 			return false;
@@ -74,13 +76,13 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	{
 		if (hmClientsLab.containsValue(client))
 		{
-			for (Map.Entry<String,String> e : hmClientsLab.entrySet())
-			{
-				if (e.getValue() == client )
-				{
-					hmClientsLab.Remove(e.getKey(), e.getValue());
-				}
-			}
+			//for (Map.Entry<String,String> e : hmClientsLab.entrySet())
+			//{
+				//if (e.getValue() == client )
+				//{
+					//hmClientsLab.Remove(e.getKey(), e.getValue());
+				//}
+			//}
 		}
 	}
 
@@ -114,6 +116,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	public String getListJoueur() throws RemoteException 
 	{
 		//return hmClientsLab.toString();
+		return "";
 	}
 
 }
