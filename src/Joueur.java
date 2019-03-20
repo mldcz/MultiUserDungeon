@@ -41,7 +41,7 @@ public class Joueur extends Combattant {
 	}
 
 
-	public void seDeplacer (Labyrinthe labyrinthe)
+	public void seDeplacer (Labyrinthe labyrinthe, String direction)
 	{
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
