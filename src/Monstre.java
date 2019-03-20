@@ -1,25 +1,14 @@
 public class Monstre extends Combattant {
 	
-	private String nomM;
+	private String nomM = "Monstre";
 	
-	public Monstre (String nomM) {
-
-		
+	public Monstre ()
+	{
 		super();
-		this.nomM = nomM;
-		this.pointsVie = 5;
+		super.pointsVie = 5;
 	}
 
-	public void setPointsVie(int pointsVie) {
-		super.setPointsVie(pointsVie);
-	}
+	public void setNomM (String nomMonstre) {this.nomM = nomM;	}
 
-	public int getPointsVie() {
-		return super.getPointsVie();
-	}
-
-	public void getPosition() {
-		super.getPosition();
-	}
-	
+	public String getNomM() {	return nomM;}
 }

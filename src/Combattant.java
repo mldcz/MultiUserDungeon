@@ -44,9 +44,6 @@ public class Combattant
 	//methodes
 	public void attaquer(String adversaire)
 	{
-		System.out.println(" "); //saut de ligne
-		System.out.println("Lancement d'une attaque !");
-
 		this.estVictorieux=false;
 		adversaire.setEstVictorieux(false);
 		int attaque = Math.Random();

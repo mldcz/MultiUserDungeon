@@ -47,21 +47,134 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 				if (str == "N")
 				{
 					joueur.seDeplacer(proxy.labyrinthe,"N");
+					Monstre monstre = new Monstre();
+					System.out.println("Il y a un monstre dans la salle. Que voulez-vous faire ? 1 attaquer, 0 pour fuir");
+
+					boolean choixAttaque = false;
+					while (choixAttaque != true)
+					{
+						Scanner scanner = new Scanner(System.in);
+						String str = scanner.nextLine();
+						int choix = (int) str;
+
+						if (choix == 1)
+						{
+							System.out.println(" "); //saut de ligne
+							System.out.println("Lancement d'une attaque !");
+							joueur.attaquer(monstre);
+							choixAttaque = true;
+						}
+						else if (choix == 0)
+						{
+							System.out.println("Vous prenez la fuite.");
+							choixAttaque = false;
+						}
+						else
+						{
+							System.out.println("Le choix n'est pas correct.");
+							choixAttaque = false;
+						}
+					}
+
 					entreeClavier = true;
 				}
 				else if (str == "S")
 				{
-					joueur.seDeplacer(proxy.labyrinthe,"N");
+					joueur.seDeplacer(proxy.labyrinthe,"S");
+					Monstre monstre = new Monstre();
+					System.out.println("Il y a un monstre dans la salle. Que voulez-vous faire ? 1 attaquer, 0 pour fuir");
+
+					boolean choixAttaque = false;
+					while (choixAttaque != true)
+					{
+						Scanner scanner = new Scanner(System.in);
+						String str = scanner.nextLine();
+						int choix = (int) str;
+
+						if (choix == 1)
+						{
+							System.out.println(" "); //saut de ligne
+							System.out.println("Lancement d'une attaque !");
+							joueur.attaquer(monstre);
+							choixAttaque = true;
+						}
+						else if (choix == 0)
+						{
+							System.out.println("Vous prenez la fuite.");
+							choixAttaque = false;
+						}
+						else
+						{
+							System.out.println("Le choix n'est pas correct.");
+							choixAttaque = false;
+						}
+					}
 					entreeClavier = true;
 				}
 				else if (str == "O")
 				{
-					joueur.seDeplacer(proxy.labyrinthe,"N");
+					joueur.seDeplacer(proxy.labyrinthe,"O");
+					Monstre monstre = new Monstre();
+					System.out.println("Il y a un monstre dans la salle. Que voulez-vous faire ? 1 attaquer, 0 pour fuir");
+
+					boolean choixAttaque = false;
+					while (choixAttaque != true)
+					{
+						Scanner scanner = new Scanner(System.in);
+						String str = scanner.nextLine();
+						int choix = (int) str;
+
+						if (choix == 1)
+						{
+							System.out.println(" "); //saut de ligne
+							System.out.println("Lancement d'une attaque !");
+							joueur.attaquer(monstre);
+							choixAttaque = true;
+						}
+						else if (choix == 0)
+						{
+							System.out.println("Vous prenez la fuite.");
+							choixAttaque = false;
+						}
+						else
+						{
+							System.out.println("Le choix n'est pas correct.");
+							choixAttaque = false;
+						}
+					}
 					entreeClavier = true;
 				}
 				else if (str == "E")
 				{
-					joueur.seDeplacer(proxy.labyrinthe, "N");
+					joueur.seDeplacer(proxy.labyrinthe, "E");
+					Monstre monstre = new Monstre();
+					System.out.println("Il y a un monstre dans la salle. Que voulez-vous faire ? 1 attaquer, 0 pour fuir");
+
+					boolean choixAttaque = false;
+					while (choixAttaque != true)
+					{
+						Scanner scanner = new Scanner(System.in);
+						String str = scanner.nextLine();
+						int choix = (int) str;
+
+						if (choix == 1)
+						{
+							System.out.println(" "); //saut de ligne
+							System.out.println("Lancement d'une attaque !");
+							joueur.attaquer(monstre);
+							choixAttaque = true;
+						}
+						else if (choix == 0)
+						{
+							System.out.println("Vous prenez la fuite.");
+							choixAttaque = false;
+						}
+						else
+						{
+							System.out.println("Le choix n'est pas correct.");
+							choixAttaque = false;
+						}
+					}
 					entreeClavier = true;
 				}
 				else if (str == "EXIT")
