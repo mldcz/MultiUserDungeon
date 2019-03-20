@@ -5,8 +5,14 @@ import java.util.Scanner;
 	
 public interface InterfaceServeurPrincipal extends java.rmi.Remote 
 {
-	public void creerJoueur(String id, String pseudo) throws java.rmi.RemoteException;
-	public void supprimerJoueur(Joueur joueur) osition(String id);
+	public ServeurPrincipal(String s) throws RemoteException;
+	public synchronized boolean creerJoueur(String) throws java.rmi.RemoteException;
+	public synchronized void supprimerJoueur(Client client) throws java.rmi.RemoteException;
+	public synchronized boolean interrogeDisponibilite() throws RemoteException;
+	public synchronized void authentification() throws RemoteException;
+	public synchronized String recupererInformations() throws RemoteException;
+
+
 	public String affichageAuthentification() throws throws java.rmi.RemoteException;
 	public boolean interrogeDisponibilite() throws java.rmi.RemoteException;
 	//public void creationLab() throws java.rmi.RemoteException;
