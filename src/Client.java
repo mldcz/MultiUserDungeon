@@ -1,6 +1,8 @@
 import java.io.Serializable;
+import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.rmi.server.Unreferenced;
 import java.util.Scanner;
 
 public class Client extends UnicastRemoteObject implements InterfaceClient, Serializable, Unreferenced
@@ -16,13 +18,13 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 	public String mdp;
 	
 	//main
-	public static void main(String[] args)
+	public void main(String[] args)
 	{
 		ServeurPrincipal proxy = (ServeurPrincipal) Naming.lookup("rmi://localhost:1099/ServeurPrincipal");
 		boolean condition = false;
 		boolean sortie = false;
 
-		(while condition != true)
+		while (condition != true)
 		{
 			System.out.println("Veuillez donner un pseudo pour votre jouer :");
 			Scanner scanner = new Scanner(System.in);
@@ -181,11 +183,13 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 				{
 					proxy.exitLab(joueur);
 					entreeClavier = false;
-					exit(0);
+					sortie = false;
+					break;
+					
 				}
-				else if (str != "N" || str != "S" || str != "E" || str != "O" || str != "EXIT)
+				else if (str != "N" || str != "S" || str != "E" || str != "O" || str != "EXIT")
 				{
-					System.out.println("Ce que vous avez entré au clavier n'est pas correct.");
+					System.out.println("Ce que vous avez entre au clavier n'est pas correct.");
 					System.out.println("");
 				}
 
@@ -193,12 +197,14 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 
 		}
 	
+
+
 	//constructor
 	public Client(String pseudo)
 	{
 		super();
 		System.out.println("Veuillez entrer un mdp : ");
-		scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		String str = scanner.nextLine();
 		this.mdp = str;
 		this.joueur = new Joueur(pseudo);
@@ -214,7 +220,7 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 
 	public Position position(String X, String Y) throws RemoteException
 	{
-		return position;
+		return position(X,Y);
 	}
 
 

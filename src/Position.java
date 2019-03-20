@@ -1,10 +1,12 @@
+import java.io.Serializable;
+
 public class Position implements Serializable
 {
     private int positionX;
     private int positionY;
 
 
-    public Position(String pseudo, int x, int y)
+    public Position(int x, int y)
     {
         this.positionX = x;
         this.positionY = y;
@@ -26,7 +28,7 @@ public class Position implements Serializable
     public void setPositionX(int pos) {this.positionX = pos;  }
 
 
-    public void setPositionY(int pos) {this.positionY = pos;}    }
+    public void setPositionY(int pos) {this.positionY = pos;}    
 
 
     public String toString()
