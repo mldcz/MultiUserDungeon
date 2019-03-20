@@ -16,11 +16,13 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	 * @param args
 	 */
 	
-	private HashMap <int, Client> hmClientsLab;
-    private Joueur joueur;
+	protected HashMap <int, Client> hmClientsLab;
+    protected Joueur joueur;
     public Labyrinthe labyrinthe;
-	private String name;
-	private int i = 1;
+	protected String name;
+	protected int i = 1;
+	
+	
 	//main
 	public static void main()
 	{
@@ -99,21 +101,6 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 
 
 
-	public boolean isLabFini() throws RemoteException 
-	{
-		if (this.labyrinthe.tabPiece.toString() == "N,S,T" && joueur.getPosition() == 44)
-		{
-			System.out.println("Vous avez trouve le tresor !");
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-		
-	}
-
-
 	public void exitLab(Joueur joueur) throws RemoteException 
 	{
 		if (hmClientsLab.containsKey(joueur))
@@ -123,9 +110,10 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 		System.out.println("Au revoir !");
 	}
 
+	
 	public String getListJoueur() throws RemoteException 
 	{
-		return hmClientsLab.toString();
+		//return hmClientsLab.toString();
 	}
 
 }

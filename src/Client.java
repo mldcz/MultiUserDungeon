@@ -1,5 +1,7 @@
 import java.io.Serializable;
+import java.net.MalformedURLException;
 import java.rmi.Naming;
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.server.Unreferenced;
@@ -18,9 +20,13 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 	public String mdp;
 	
 	//main
-	public void main(String[] args)
+	public void main(String[] args) throws RemoteException
 	{
-		ServeurPrincipal proxy = (ServeurPrincipal) Naming.lookup("rmi://localhost:1099/ServeurPrincipal");
+		ServeurPrincipal proxy;
+		try 
+		{
+			proxy = (ServeurPrincipal) Naming.lookup("rmi://localhost:1099/ServeurPrincipal");
+		
 		boolean condition = false;
 		boolean sortie = false;
 
@@ -55,9 +61,9 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 					boolean choixAttaque = false;
 					while (choixAttaque != true)
 					{
-						Scanner scanner = new Scanner(System.in);
-						String str = scanner.nextLine();
-						int choix = (int) str;
+						Scanner scanner1 = new Scanner(System.in);
+						String str1 = scanner1.nextLine();
+						int choix = Integer.parseInt(str1);
 
 						if (choix == 1)
 						{
@@ -89,9 +95,9 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 					boolean choixAttaque = false;
 					while (choixAttaque != true)
 					{
-						Scanner scanner = new Scanner(System.in);
-						String str = scanner.nextLine();
-						int choix = (int) str;
+						Scanner scanner2 = new Scanner(System.in);
+						String str2 = scanner2.nextLine();
+						int choix = Integer.parseInt(str2);
 
 						if (choix == 1)
 						{
@@ -122,9 +128,9 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 					boolean choixAttaque = false;
 					while (choixAttaque != true)
 					{
-						Scanner scanner = new Scanner(System.in);
-						String str = scanner.nextLine();
-						int choix = (int) str;
+						Scanner scanner3 = new Scanner(System.in);
+						String str3 = scanner3.nextLine();
+						int choix = Integer.parseInt(str3);
 
 						if (choix == 1)
 						{
@@ -155,9 +161,9 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 					boolean choixAttaque = false;
 					while (choixAttaque != true)
 					{
-						Scanner scanner = new Scanner(System.in);
-						String str = scanner.nextLine();
-						int choix = (int) str;
+						Scanner scanner4 = new Scanner(System.in);
+						String str4 = scanner4.nextLine();
+						int choix = Integer.parseInt(str4);
 
 						if (choix == 1)
 						{
@@ -192,15 +198,22 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 					System.out.println("Ce que vous avez entre au clavier n'est pas correct.");
 					System.out.println("");
 				}
-
 			}
-
+			}
+		} 
+		catch (MalformedURLException | NotBoundException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+
+
+	}
 	
 
 
 	//constructor
-	public Client(String pseudo)
+	public Client(String pseudo) throws RemoteException
 	{
 		super();
 		System.out.println("Veuillez entrer un mdp : ");

@@ -1,23 +1,23 @@
 public class Combattant
 {
 	//attributs
-	private int pointsVie;
-	private boolean estVictorieux;
-	private Position position()
+	protected int pointsVie;
+	protected boolean estVictorieux;
+	protected Position position;
 
 
 	//constructeur
 	public Combattant()
 	{
 		this.estVictorieux = false;
-		this.position() = new Position(1,1);
+		this.position = new Position(1,1);
 	}
 
 
 	//accesseurs
 	public Position getPosition()
 	{
-		return position();
+		return position;
 	}
 
 	public void setPointsVie (int pointsVie)
@@ -42,11 +42,11 @@ public class Combattant
 
 
 	//methodes
-	public void attaquer(String adversaire)
+	public void attaquer(Combattant adversaire)
 	{
 		this.estVictorieux=false;
 		adversaire.setEstVictorieux(false);
-		int attaque = Math.Random();
+		int attaque = (int) Math.random();
 
 
 		if ( (this.pointsVie != 0) && (adversaire.getPointsVie() != 0 ))
@@ -80,7 +80,7 @@ public class Combattant
 			estVictorieux = true;
 			System.out.println("L'adversaire ne peut combattre, il n'a plus de vie !");
 		}
-		else( (this.pointsVie == 0) && (adversaire.getPointsVie() == 0 ))
+		else( this.pointsVie == 0 && adversaire.getPointsVie() == 0 )
 		{
 
 			System.out.println("Combat impossible, aucun de vous n'a de point de vie. !");
