@@ -18,19 +18,22 @@ public class Client extends UnicastRemoteObject implements InterfaceClient, Seri
 	//main
 	public static void main(String[] args)
 	{
-	      InterfaceServeurJeu rmi;
-	      
+		ServeurPrincipal proxy = (ServeurPrincipal) Naming.lookup("rmi://localhost:1099/ServeurPrincipal");
+		Client client = new Client();
+		proxy.creerJoueur();
+
+	}
 	
 	//constructor
-	public Client()
+	public Client(String pseudo)
 	{
 		super();
-		System.out.println("Veuillez entre un pseudo : ");
-		Scanner scanner = new Scanner(System.in);
-		this.pseudo = scanner.toString();
+
 		System.out.println("Veuillez entrer un mdp : ");
 		scanner = new Scanner(System.in);
-		this.mdp = scanner.toString();
+		String str = scanner.nextLine();
+		this.mdp = str;
+
 		this.player = new Joueur(pseudo);
 
 		

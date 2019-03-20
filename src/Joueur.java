@@ -4,7 +4,8 @@ public class Joueur extends Combattant {
 	private String nomJ;
 	private Position position;
 	
-	public Joueur (String nomJ) {
+	public Joueur (String nomJ)
+	{
 		super();
 		this.nomJ = nomJ;
 		this.pointsVie = 10;

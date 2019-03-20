@@ -44,10 +44,13 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 		this.name = s;
 		hmClientsLab = new HashMap<String, Client>();
 		hmClientsStockes = new ArrayList<Client>();
+		this.labyrinthe = new Labyrinthe();
+
 		
 	}
-	
-	public synchronized void creerJoueur(String pseudo) throws RemoteException
+
+
+	public synchronized void creerJoueur() throws RemoteException
 	{
 		boolean condition = false;
 		
@@ -56,6 +59,8 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 			System.out.println("Veuillez donner un pseudo pour votre jouer :");
 			
 			Scanner scanner = new Scanner(System.in);
+			String str = scanner.nextLine();
+			this.pseudo = str;
 			
 			if (hmClientsStockes.contains(scanner.toString()))
 			{
@@ -68,8 +73,6 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 				condition = true;
 			}
 		}
-	
-		
 	}
 	
 	
@@ -88,14 +91,6 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	}
 
 	
-	public  String affichageAuthentification() throws RemoteException
-	{
-		
-		System.out.println();
-		if (joueur.)
-		return ;
-	}
-
 
 
 	public synchronized boolean interrogeDisponibilite() throws RemoteException 
@@ -114,11 +109,9 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	}
 
 	public synchronized void desinscription(Client client) throws RemoteException 
-	{
-		
+    {
 		hmClientsLab.remove(joueur., new Client(pseudo));
 		hmClientsStockes.Add(new Client(pseudo));
-		
 	}
 
 

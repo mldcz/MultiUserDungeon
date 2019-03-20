@@ -18,6 +18,6 @@ public interface InterfaceClient extends java.rmi.Remote
 	//public void enregistrer() throws java.rmi.RemoteException;
 	//public String getMDP() throws java.rmi.RemoteException;
 	//public void saisieLoginMDP() throws java.rmi.RemoteException;
-	public Position position(String X, String Y) throws java.rmi.RemoteException;
+	Position position(String X, String Y) throws java.rmi.RemoteException;
 
 }
