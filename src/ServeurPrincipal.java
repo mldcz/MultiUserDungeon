@@ -15,10 +15,11 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	 * @param args
 	 */
 	
-	private HashMap <String, Client> hmClientsLab;
+	private HashMap <int, Client> hmClientsLab;
     private Joueur joueur;
     private Labyrinthe labyrinthe;
 	private String name;
+	private int i = 1;
 	//main
 	public static void main()
 	{
@@ -42,11 +43,10 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	{
 		super();
 		this.name = s;
-		hmClientsLab = new HashMap<String, Client>();
+		hmClientsLab = new HashMap<int, Client>();
 		hmClientsStockes = new ArrayList<Client>();
 		this.labyrinthe = new Labyrinthe();
-
-		
+		this.labyrinthe.generationPiece();
 	}
 
 
@@ -57,20 +57,21 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 		while (condition!= true)
 		{
 			System.out.println("Veuillez donner un pseudo pour votre jouer :");
-			
 			Scanner scanner = new Scanner(System.in);
 			String str = scanner.nextLine();
 			this.pseudo = str;
 			
-			if (hmClientsStockes.contains(scanner.toString()))
+			if (hmClientsStockes.contains(str))
 			{
 				System.out.println("Pseudo deja pris.");
 			}
 			else
 			{
-				hmClientsLab.put(pseudo, new Client(pseudo));
+				Client client = new Client(pseudo);
+				hmClientsLab.put(i,client);
 				System.out.println("Bienvenue " + pseudo + " !");
 				condition = true;
+				i++;
 			}
 		}
 	}
@@ -115,19 +116,7 @@ public class ServeurPrincipal extends UnicastRemoteObject implements InterfaceSe
 	}
 
 
-	public synchronized void creationLab() 
-	{
-		this.labyrinthe = new Labyrinthe();
-		this.labyrinthe.generationPiece();
-		System.out.println("Creation du labyrinthe ok ! ");
-		
-	}
 
-
-	public void changerPiece() throws RemoteException 
-	{
-		
-	}
 
 	public boolean isLabFini() throws RemoteException 
 	{

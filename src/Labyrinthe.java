@@ -54,10 +54,5 @@ public class Labyrinthe
 		tabPiece[5][5]="O,S";
 		
 	}
-
-
-
-
-
 }
 		
